@@ -5,7 +5,7 @@ Feature: Cucumber Basket
   So that I don't drop them all.
 
 
-  @add
+  @add @cucumberTest
   Scenario Outline: Add cucumbers to a basket
     Given the basket has "<initial>" cucumbers
     When "<some>" cucumbers are added to the basket

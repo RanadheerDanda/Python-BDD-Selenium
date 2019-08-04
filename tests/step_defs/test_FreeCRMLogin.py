@@ -66,7 +66,7 @@ def user_enter_details(browser,username, password):
     browser.find_element(By.NAME, "username").send_keys(username)
     browser.find_element(By.NAME, "password").send_keys(password)
 
-@when("user enters <username> and <password>")
+@when('user enters "<username>" and "<password>"')
 def user_enter_details(browser,username, password):
     browser.find_element(By.NAME, "username").send_keys(username)
     browser.find_element(By.NAME, "password").send_keys(password)
@@ -87,6 +87,7 @@ def close_the_browser(browser):
 @then('user is on home page')
 def user_is_on_home_page(browser):
     title = browser.title
-    assert title == title
+    print(title)
+    assert title == "CRMPRO - CRM software for customer relationship management, sales, and support."
 
 
